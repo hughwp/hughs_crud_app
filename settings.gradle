@@ -1,1 +1,3 @@
 rootProject.name = 'hughs_crud_app'
+
+include 'src:test:Dockerfile'
