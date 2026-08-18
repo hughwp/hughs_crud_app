@@ -1,6 +1,12 @@
 plugins {
     id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
+
+group = 'com.hughcode'
+version = '1.0-SNAPSHOT'
+
+
 
 group = 'com.hughcode'
 version = '1.0-SNAPSHOT'
@@ -19,6 +25,13 @@ dependencies {
 }
 
 jar {
+    manifest {
+        attributes 'Main-Class': 'com.hughcode.App'
+    }
+}
+
+shadowJar {
+    archiveClassifier.set('')
     manifest {
         attributes 'Main-Class': 'com.hughcode.App'
     }
